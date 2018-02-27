@@ -36,5 +36,7 @@ public enum GazeState
 {
     NEUTRAL = 0,
     LEFT = 1,
-    RIGHT = 2
+    LEFT_BACK = -1,
+    RIGHT = 2,
+    RIGHT_BACK = -2
 }
