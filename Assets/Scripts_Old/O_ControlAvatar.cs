@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlAvatar : MonoBehaviour
+public class O_ControlAvatar : MonoBehaviour
 {
     [SerializeField]
     private AvatarController controller;
-
-    private bool gazeBack = false;
 
     void Update()
     {
