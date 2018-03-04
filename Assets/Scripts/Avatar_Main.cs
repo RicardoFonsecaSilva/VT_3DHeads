@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Avatar_Main : MonoBehaviour
@@ -35,45 +34,47 @@ public class Avatar_Main : MonoBehaviour
             manager.Feel(tutor, new Emotion("Sad", "High"));
 
         // Expression
-        //if (Input.GetKey("a"))
-        //    ;
-        //if (Input.GetKey("s"))
-        //    ;
-        //if (Input.GetKey("d"))
-        //    ;
-        //if (Input.GetKey("f"))
-        //    ;
-        //if (Input.GetKey("g"))
-        //    ;
-        //if (Input.GetKey("h"))
-        //    ;
-        //if (Input.GetKey("j"))
-        //    ;
-        //if (Input.GetKey("k"))
-        //    ;
-        //if (Input.GetKey("l"))
-        //    ;
-        //if (Input.GetKey("z"))
-        //    ;
-        //if (Input.GetKey("x"))
-        //    ;
-        //if (Input.GetKey("c"))
-        //    ;
-        //if (Input.GetKey("v"))
-        //    ;
-        //if (Input.GetKey("b"))
-        //    ;
-        //if (Input.GetKey("n"))
-        //    ;
+        if (Input.GetKey("a"))
+            manager.Express(tutor, new Expression("Neutral", ""));
+        if (Input.GetKey("s"))
+            manager.Express(tutor, new Expression("Happy", "Low"));
+        if (Input.GetKey("d"))
+            manager.Express(tutor, new Expression("Happy", "High"));
+        if (Input.GetKey("f"))
+            manager.Express(tutor, new Expression("Sad", "Low"));
+        if (Input.GetKey("g"))
+            manager.Express(tutor, new Expression("Sad", "High"));
+        if (Input.GetKey("h"))
+            manager.Express(tutor, new Expression("Anger", "Low"));
+        if (Input.GetKey("j"))
+            manager.Express(tutor, new Expression("Anger", "High"));
+        if (Input.GetKey("k"))
+            manager.Express(tutor, new Expression("Fear", "Low"));
+        if (Input.GetKey("l"))
+            manager.Express(tutor, new Expression("Fear", "High"));
+        if (Input.GetKey("z"))
+            manager.Express(tutor, new Expression("Disgust", "Low"));
+        if (Input.GetKey("x"))
+            manager.Express(tutor, new Expression("Disgust", "High"));
+        if (Input.GetKey("c"))
+            manager.Express(tutor, new Expression("Surprise", "Low"));
+        if (Input.GetKey("v"))
+            manager.Express(tutor, new Expression("Surprise", "High"));
 
-        // Gaze
-        //if (Input.GetKey("y"))
-        //    ;
-        //if (Input.GetKey("u"))
-        //    ;
-        //if (Input.GetKey("i"))
-        //    ;
-        //if (Input.GetKey("o"))
-        //    ;
+        // Action
+        if (Input.GetKey("b"))
+            manager.Act(tutor, new Action("Head", "Nod"));
+        if (Input.GetKey("n"))
+            manager.Act(tutor, new Action("Talk", ""));
+        if (Input.GetKey("m"))
+            manager.Act(tutor, new Action("Talk", "End"));
+        if (Input.GetKey("y"))
+            manager.Act(tutor, new Action("Gaze", "Middle to Left"));
+        if (Input.GetKey("u"))
+            manager.Act(tutor, new Action("Gaze", "Left to Middle"));
+        if (Input.GetKey("i"))
+            manager.Act(tutor, new Action("Gaze", "Middle to Right"));
+        if (Input.GetKey("o"))
+            manager.Act(tutor, new Action("Gaze", "Right to Middle"));
     }
 }

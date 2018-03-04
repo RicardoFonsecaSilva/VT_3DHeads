@@ -1,5 +1,5 @@
 ﻿[System.Serializable]
-public class Emotion
+public class Emotion : IState
 {
     public string Name { get; set; }
     public string Intensity { get; set; }
@@ -9,5 +9,11 @@ public class Emotion
     {
         Name = name;
         Intensity = intensity;
+    }
+
+    string IState.Param1
+    {
+        get { return this.Intensity; }
+        set { this.Intensity = value; }
     }
 }
