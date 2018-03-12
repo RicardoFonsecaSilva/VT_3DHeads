@@ -63,18 +63,18 @@ public class Avatar_Main : MonoBehaviour
 
         // Action
         if (Input.GetKey("b"))
-            manager.Act(tutor, new Action("Head", "Nod"));
+            manager.Act(tutor, new HeadAction("Head", "Nod"));
         if (Input.GetKey("n"))
-            manager.Act(tutor, new Action("Talk", ""));
+            manager.Act(tutor, new HeadAction("Talk", ""));
         if (Input.GetKey("m"))
-            manager.Act(tutor, new Action("Talk", "End"));
+            manager.Act(tutor, new HeadAction("Talk", "End"));
         if (Input.GetKey("y"))
-            manager.Act(tutor, new Action("Gaze", "Middle to Left"));
+            manager.Act(tutor, new HeadAction("Gaze", "Middle to Left"));
         if (Input.GetKey("u"))
-            manager.Act(tutor, new Action("Gaze", "Left to Middle"));
+            manager.Act(tutor, new HeadAction("Gaze", "Left to Middle"));
         if (Input.GetKey("i"))
-            manager.Act(tutor, new Action("Gaze", "Middle to Right"));
+            manager.Act(tutor, new HeadAction("Gaze", "Middle to Right"));
         if (Input.GetKey("o"))
-            manager.Act(tutor, new Action("Gaze", "Right to Middle"));
+            manager.Act(tutor, new HeadAction("Gaze", "Right to Middle"));
     }
 }
